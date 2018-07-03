@@ -3,26 +3,24 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-test',
   template: `
-    <h2>Welcome Dariusz</h2>
-    <h2>Welcome {{name1}}</h2>
-    <h2>{{'Welcome ' + name2}}</h2>
-    <h2>{{greetUser()}}</h2>
-    <h2>{{name1.toUpperCase()}}</h2>
+    <h2>Welcome {{name}}</h2>
+    <input [disabled]="isDisabled" [id]="myId" type="text" value="Paul">
+    <input [disabled]="isNotDisabled" [class]="myClass" type="text" value="Paul">
+    
   `,
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
 
-  public name1 = 'John';
-  public name2 = 'Paul';
+  public name = 'Dariusz';
+  public myId = 'testId';
+  public myClass = 'testClass';
+  public isDisabled = true;
+  public isNotDisabled = false;
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  greetUser() {
-    return 'Hello ' + this.name1;
   }
 
 }
