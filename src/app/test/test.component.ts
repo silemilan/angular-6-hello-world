@@ -4,19 +4,39 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   template: `
     <h2>Welcome {{name}}</h2>
-    <input [disabled]="isDisabled" [id]="myId" type="text" value="Paul">
-    <input [disabled]="isNotDisabled" [class]="myClass" type="text" value="Paul">
-    
+    <h2 class="text-success">text-success css class</h2>
+    <h2 [class]="successClass">text-success css class</h2>
+    <h2 class="text-success text-special">text-success and text-special css classes</h2>
+    <h2 [class.text-danger]="hasError">text-danger css class based on true or false</h2>
+
+    <h2 [ngClass]="messageClasses">multiple classes from messageClasses object binded by ngClass directive</h2>
   `,
-  styleUrls: ['./test.component.css']
+  styles: [`
+    .text-success {
+      color: green;
+    }
+    .text-danger {
+      color: red;
+    }
+    .text-special {
+      font-style: italic; 
+    }
+  `]
 })
 export class TestComponent implements OnInit {
 
   public name = 'Dariusz';
-  public myId = 'testId';
-  public myClass = 'testClass';
-  public isDisabled = true;
-  public isNotDisabled = false;
+  public successClass = 'text-success';
+  public specialClass = 'text-special';
+
+  public hasError = true;
+  public isSpecial = true;
+
+  public messageClasses = {
+    'text-success': !this.hasError,
+    'text-danger': this.hasError,
+    'text-special': this.isSpecial
+  }
 
   constructor() { }
 
