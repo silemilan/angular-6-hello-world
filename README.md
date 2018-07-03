@@ -30,4 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ&index=1
 
 ### Lessons watched for this branch
-https://www.youtube.com/watch?v=ZfIc1_oj7uM&index=9&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+https://www.youtube.com/watch?v=Oo0-r_YhoJs&index=10&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ

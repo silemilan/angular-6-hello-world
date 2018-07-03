@@ -4,33 +4,23 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   template: `
     <h2>Welcome {{name}}</h2>
-   <button (click)="onClickeventHandler()">Greet 1</button>
-   <button (click)="onClickeventHandler2()">Greet 2</button>
-   <h3>{{greet2}}</h3>
+    <input #myInput type="text">
+    <button (click)="logMessage(myInput.value)">Log</button>
+    <h3>{{valueToDisplay}}</h3>
   `,
   styles: []
 })
 export class TestComponent implements OnInit {
 
   public name = 'Dariusz';
-  public greet2 = "";
-
+  public valueToDisplay = '';
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClickeventHandler() {
-    console.log('Test 1');
+  logMessage(value) {
+    this.valueToDisplay = value;
   }
-
-  onClickeventHandler2() {
-    if(this.greet2 === "") {
-      this.greet2 = 'Hi there!';
-    } else {
-      this.greet2 = "";
-    }
-  }
-
 }
