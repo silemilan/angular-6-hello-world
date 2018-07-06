@@ -3,18 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-test',
   template: `
-    <div [ngSwitch]="color">
-      <div *ngSwitchCase="'red'">Text displayed by *ngSwitchCase="'red'"</div>
-      <div *ngSwitchCase="'blue'">Text displayed by *ngSwitchCase="'blue'"</div>
-      <div *ngSwitchCase="'green'">Text displayed by *ngSwitchCase="'green'"</div>
-      <div *ngSwitchDefault>Text displayed by *ngSwitchDefault</div>
+    <div *ngFor="let item of items; index as i">
+      <h2>{{i}} {{item}}</h2>
     </div>
   `,
   styles: []
 })
 export class TestComponent implements OnInit {
 
-  public color = "red";
+  public items = ['Item A', 'Item B', 'Item C', 'Item D'];
 
   constructor() { }
 
