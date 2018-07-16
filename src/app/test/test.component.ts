@@ -1,22 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-test',
   template: `
-    <div *ngFor="let item of items; index as i">
-      <h2>{{i}} {{item}}</h2>
-    </div>
+    <h2>{{ name }}</h2>
+    <h2>{{ name | lowercase }}</h2>
+    <h2>{{ name | uppercase }}</h2>
   `,
   styles: []
 })
 export class TestComponent implements OnInit {
 
-  public items = ['Item A', 'Item B', 'Item C', 'Item D'];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-
+ public name = 'Codevolution';
+ public message = 'Welcome to Codevolution';
+ public person = {
+   'firstName': 'John',
+   'lastName': 'Smith'
+ }
+ ngOnInit(){
+  //called after the constructor and called  after the first ngOnChanges() 
+}
 }
