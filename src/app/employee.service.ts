@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class EmployeeService {
 
-  private _url: string = '/assets/data/employees.json';
+  private _url: string = 'https://jsonplaceholder.typicode.com/users';
 
   constructor(private http: HttpClient) {}
 
