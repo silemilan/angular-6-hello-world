@@ -31,3 +31,5 @@ https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTk
 
 ### Lessons watched for this branch
 https://www.youtube.com/watch?v=OFPIGlxunL0&index=17&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+https://www.youtube.com/watch?v=pwuGBvOPFYI&index=18&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+https://www.youtube.com/watch?v=69VeYoKzL6I&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ&index=19
