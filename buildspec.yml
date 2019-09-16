@@ -29,7 +29,7 @@ phases:
     - ng build --prod 
       # - command
   post_build:
-    #commands:
+    commands:
     - aws s3 cp dist s3://s3bucket-angular-test/dev-test --recursive
       # - command
       # - command
