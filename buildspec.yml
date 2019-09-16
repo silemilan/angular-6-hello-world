@@ -33,7 +33,7 @@ phases:
     - aws s3 cp dist s3://s3bucket-angular-test/dev-test --recursive
       # - command
       # - command
-#artifacts:
+artifacts:
   files:
   - 'target/dist'
     # - location
