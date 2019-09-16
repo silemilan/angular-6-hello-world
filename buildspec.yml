@@ -35,9 +35,7 @@ phases:
       # - command
 #artifacts:
   files:
-  - '**/*'
-  base_directory: 'dist*'
-  discard_paths: yes
+  - 'target/dist'
     # - location
     # - location
   #name: $(date +%Y-%m-%d)
