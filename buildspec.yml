@@ -1,46 +1,26 @@
 version: 0.2
-
-#env:
-  #variables:
-     # key: "value"
-     # key: "value"
-  #parameter-store:
-     # key: "value"
-     # key: "value"
-  #git-credential-helper: yes
-
+env:
+  variables:
+    S3_BUCKET: "s3bucket-angular-test/dev-test"
 phases:
   install:
-    #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
-    #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
-    #runtime-versions:
-      # name: version
-      # name: version
+    runtime-versions:
+      nodejs: 10
+  pre_build:
     commands:
-    - nmp install -g @angular/cli
-      # - command
-  #pre_build:
-    #commands:
-      # - command
-      # - command
+      - echo Installing source NPM dependencies...
+      - npm install
+      - npm install -g @angular/cli
   build:
     commands:
-    - npm install 
-    - ng build --prod 
-      # - command
+      - echo Build started on `date`
+      - ng build --prod 
   post_build:
-    commands:
-    - aws s3 cp dist s3://s3bucket-angular-test/dev-test --recursive
-      # - command
-      # - command
+     commands:
+      - aws s3 cp dist s3://${S3_BUCKET} --recursive
+      - echo Build completed on `date`
 artifacts:
   files:
-  - 'target/dist'
-    # - location
-    # - location
-  #name: $(date +%Y-%m-%d)
-  #discard-paths: yes
-  #base-directory: location
-#cache:
-  #paths:
-    # - paths
+      - '**/*'
+  base-directory: 'dist*'
+  discard-paths: yes
